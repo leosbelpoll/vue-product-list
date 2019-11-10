@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, .7);
+    padding: 0 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    width: 500px;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: solid rgba(0, 0, 0, .3) 1px;
+    padding: 10px;  
+    outline: none;
+    width: 100%;
+    font-size: 2em;
+}
+
+span.actions {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    padding: 10px;
+    border-bottom: solid rgba(0, 0, 0, .13) 1px;
+    display: flex;
+    align-items: center;
+}
+
+li > span {
+    position: absolute;
+    right: 10px;
+    float: right;
+}
+
+button.round {
+    border: solid rgba(0, 0, 0, .1) 1px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    outline: none;
+}
+
+button:hover {
+    border: solid rgba(0, 0, 0, .3) 1px;
+    cursor: pointer;
+}
+
+button:active {
+    background: rgba(0, 0, 0, .07);
+}
+
+span.total {
+    float: right;
+    padding-right: 45px;
+    color: rgba(0, 0, 0, .3);
+}
+
+span.total-less-padding {
+    padding-right: 30px;
+}
+
+span.total-number {
+    font-size: 4em;
+}
+
+.dashed-text {
+    text-decoration: line-through;
+}

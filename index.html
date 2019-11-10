@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <input type="text" @keypress.enter="addProduct" v-model="productTitle" placeholder="Enter product title">
+        <ul>
+            <li v-for="product in products">
+                <p :class="{'dashed-text': product.quantity == 0}">{{product.title}}</p>
+                <span class="actions">
+                    <button class="round" @click="decreaseQuantity(product)">-</button>
+                    <span :class="{success: product.quantity > 0}">{{product.quantity}}</span>
+                    <button class="round" @click="increaseQuantity(product)">+</button>
+                </span>
+            </li>
+        </ul>
+        <span class="total" :class="{'total-less-padding': totalPrice > 9}">Total <span class="total-number">{{totalPrice}}</span></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
